@@ -5,7 +5,6 @@ with
     member this.Id = (this.Row * 8) + this.Col
 
 let parse (bspStr : string) =
-    // let bsp = bspStr |> List.ofArray
     let rec findRow bsp rows =
         match rows |> List.splitInto 2, bsp with
         | [ front; _ ], 'F' :: tail -> findRow tail front
