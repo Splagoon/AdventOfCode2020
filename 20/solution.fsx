@@ -49,8 +49,6 @@ let input =
             | c -> failwithf "Bad character in data: %c" c))
         |> array2D
         |> fun data -> { Id = id; Data = data })
-        // |> allOrientations
-        // |> List.map (fun data -> { Id = id; Data = data }))
 
 let maxIndex =
     input
